@@ -6,7 +6,7 @@
 ## 導入方法
 1. ダウンロードしたら`<div class="zdo_drawer_menu">`で囲まれたHTMLをコピーして自身のHTMLへペーストします。
 2. jQeuryを読み込みます。
-3. `zdo_drawe_menu.css`と`zdo_drawer_menu.js`をそれぞれ読み込みます。
+3. cssフォルダ内の`zdo_drawe_menu.css`とjsフォルダ内の`zdo_drawer_menu.js`をそれぞれ読み込みます。
 
 テンプレートにはcss,jsともに読み込まれているので、これを基にページを作成しても構いません。
 
@@ -41,6 +41,8 @@ CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上�
 に書かれているので、ここを書き換えてください。
 ### その他
 クラス名には接頭辞として`zdo_drawer`をつけてあるのでクラス名のバッティングはないと思います。ラッパーとして`zdo_drawer_menu`を使っています。このラッパーの中で一度リセットはしていますが、場合によってはCSSの上書きが発生するかもしれないので、表示がうまくいかない場合はCSSを確認してください。
+
+ファイル内にはgulpfile.jsなど入っていますが必要なindex.html,zdo_drawer_menu.css,zdo_drawer_menu.jsの3つです。コンパイル前のzdo_drawer_menu.scssも入っています。
 
 ## ライセンス
 MIT License  
