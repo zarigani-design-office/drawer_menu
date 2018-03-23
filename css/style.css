@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+
+/*=========================
+Reset
+=========================*/
+/*
+Zarigani Design Office Reset CSS
+Author:Zarigani Design Office
+Author URI: https://zarigani-design-office.com
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-family: "Noto Sans JP", "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
+  color: #000;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP","游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,"ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro","メイリオ",  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  font-feature-settings: 'palt';
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 42px;
+  color: #276490;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 1001;
+  text-align: center;
+  outline: none;
+}
+
+button .bar {
+  display: block;
+  height: 2px;
+  background-color: #276490;
+  margin: 10px 0;
+  transition: all 0.2s;
+  transform-origin: 0 0;
+}
+
+button .close {
+  letter-spacing: 0.08em;
+  display: none;
+}
+
+button .menu {
+  display: block;
+  text-align: center;
+}
+
+button.active .bar {
+  width: 49px;
+}
+
+button.active .bar1 {
+  transform: rotate(30deg);
+}
+
+button.active .bar2 {
+  opacity: 0;
+}
+
+button.active .bar3 {
+  transform: rotate(-30deg);
+}
+
+button.active .menu {
+  display: none;
+}
+
+button.active .close {
+  display: block;
+}
+
+nav {
+  width: 312px;
+  height: 100%;
+  transition: all 0.2s;
+  transform: translate(312px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #FFF;
+}
+
+nav.open {
+  transform: translate(0);
+}

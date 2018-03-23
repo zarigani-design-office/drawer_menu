@@ -1,0 +1,136 @@
+@charset "UTF-8";
+/*
+Zarigani Design Office Drawer Menu
+Author: Zarigani Design Office
+Author URI: https://zarigani-design-office.com
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+.zdo_drawer_menu {
+	* {
+		margin: 0;
+		padding: 0;
+		outline: none;
+		border: none;
+		font: inherit;
+		font-family: inherit;
+		font-size: 100%;
+		font-style: inherit;
+		font-weight: inherit;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		text-align: left;
+		text-decoration: none;
+		list-style: none;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	a:visited {
+		color: inherit;
+	}
+	.zdo_drawer_bg {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 999;
+		background-color: rgba(51, 51, 51, 0.5);
+		display: none;
+		top: 0;
+		left: 0;
+	}
+	.zdo_drawer_button {
+		display: block;
+		background: none;
+		border: none;
+		padding: 0;
+		width: 42px;
+		letter-spacing: 0.1em;
+		cursor: pointer;
+		position: fixed;
+		top: 32px;
+		right: 32px;
+		z-index: 1001;
+		text-align: center;
+		outline: none;
+		&.active {
+			.zdo_drawer_bar {
+				width: 49px;
+			}
+			.zdo_drawer_bar1 {
+				transform: rotate(30deg);
+			}
+			.zdo_drawer_bar2 {
+				opacity: 0;
+			}
+			.zdo_drawer_bar3 {
+				transform: rotate(-30deg);
+			}
+			.zdo_drawer_menu_text {
+				display: none;
+			}
+			.zdo_drawer_close {
+				display: block;
+			}
+		}
+	}
+	.zdo_drawer_bar {
+		display: block;
+		height: 2px;
+		margin: 10px 0;
+		transition: all 0.2s;
+		transform-origin: 0 0;
+	}
+	.zdo_drawer_text {
+		text-align: center;
+		font-size: 10px;
+	}
+	.zdo_drawer_close {
+		letter-spacing: 0.08em;
+		display: none;
+	}
+	.zdo_drawer_menu_text {
+		display: block;
+	}
+	.zdo_drawer_nav_wrapper {
+		width: 312px;
+		height: 100%;
+		transition: all 0.2s;
+		transform: translate(312px);
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 1000;
+		background-color: #FFF;
+		&.open {
+			transform: translate(0);
+		}
+	}
+}
+
+
+/*+++ Default Navigation CSS +++*/
+
+.zdo_drawer_menu {
+	.zdo_drawer_nav {
+		padding: 112px 24px;
+		li {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+/*+++ Default Button Color +++*/
+
+.zdo_drawer_menu {
+	.zdo_drawer_button {
+		color: #276490;
+		.zdo_drawer_bar {
+			background-color: #276490;
+		}
+	}
+}
