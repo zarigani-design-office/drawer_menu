@@ -1,4 +1,5 @@
 $(function () {
+	
 	$('.zdo_drawer_button').click(function () {
 		$(this).toggleClass('active');
 		$('.zdo_drawer_bg').fadeToggle();
@@ -6,7 +7,7 @@ $(function () {
 	})
 	$('.zdo_drawer_bg').click(function () {
 		$(this).fadeOut();
-		$('.btn_menu').removeClass('active');
+		$('.zdo_drawer_button').removeClass('active');
 		$('nav').removeClass('open');
 	});
 })
