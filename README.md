@@ -12,6 +12,9 @@
 
 ## 見た目の変更
 CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上書きしても構いません。
+### 左側に出したい場合
+`<div class="zdo_drawer_menu">`の部分にclass名`left`を足して、`<div class="zdo_drawer_menu left">`にすればボタン、ナビゲーションともに左側になります。
+
 ### ボタンとMENU文字の色
 ボタンの色と文字色は136行目の
 ```
