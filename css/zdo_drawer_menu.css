@@ -126,6 +126,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transform: translate(0);
 }
 
+.zdo_drawer_menu.left .zdo_drawer_button {
+  right: auto;
+  left: 32px;
+}
+
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper {
+  transform: translate(-312px);
+  right: auto;
+  left: 0;
+}
+
+.zdo_drawer_menu.left .zdo_drawer_nav_wrapper.open {
+  transform: translate(0);
+}
+
 /*+++ Default Navigation CSS +++*/
 .zdo_drawer_menu .zdo_drawer_nav {
   padding: 112px 24px;
