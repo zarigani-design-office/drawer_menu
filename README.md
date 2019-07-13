@@ -8,7 +8,11 @@
 2. jQeuryを読み込みます。
 3. cssフォルダ内の`zdo_drawe_menu.css`とjsフォルダ内の`zdo_drawer_menu.js`をそれぞれ読み込みます。
 
-テンプレートにはcss,jsともに読み込まれているので、これを基にページを作成しても構いません。
+テンプレートのindex.htmlにはcss,jsともに読み込まれているので、これを基にページを作成しても構いません。
+
+## ハンバーガーボタンジェネレーターと連携
+拙作の[ハンバーガーボタンジェネレーター](https://zarigani-design-office.com/hamburger/)との互換性をもたせました11行目付近の`/* === Hambuerger Button's Style Paste Here === */`から118行目の`/* === Hambuerger Button's Style End === */`までにジェネレーターで生成したCSSを貼り付けるとハンバーガーボタンをカスタマイズできます。
+
 
 ## 見た目の変更
 CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上書きしても構いません。
@@ -16,7 +20,7 @@ CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上�
 `<div class="zdo_drawer_menu">`の部分にclass名`left`を足して、`<div class="zdo_drawer_menu left">`にすればボタン、ナビゲーションともに左側になります。
 
 ### ボタンとMENU文字の色
-ボタンの色と文字色は136行目の
+ボタンの色と文字色は109行目の
 ```
 /*+++ Default Button Color +++*/
 .zdo_drawer_menu .zdo_drawer_button {
@@ -29,7 +33,7 @@ CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上�
 ```
 部分にかかれているのでカラーコードを変更すると色が変えられます。
 ### ナビゲーションのカスタマイズ
-ナビゲーションには基本的なCSSのみ適用しています。CSS126行目の
+ナビゲーションには基本的なCSSのみ適用しています。CSS170行目の
 ```
 /*+++ Default Navigation CSS +++*/
 .zdo_drawer_menu .zdo_drawer_nav {
@@ -45,7 +49,7 @@ CSSは `zdo_drawe_menu.css`に書かれています。直接変更しても上�
 ### その他
 クラス名には接頭辞として`zdo_drawer`をつけてあるのでクラス名のバッティングはないと思います。ラッパーとして`zdo_drawer_menu`を使っています。このラッパーの中で一度リセットはしていますが、場合によってはCSSの上書きが発生するかもしれないので、表示がうまくいかない場合はCSSを確認してください。
 
-ファイル内にはgulpfile.jsなど入っていますが必要なindex.html,zdo_drawer_menu.css,zdo_drawer_menu.jsの3つです。コンパイル前のzdo_drawer_menu.scssも入っています。
+ファイル内にはpackage.jsonなど入っていますが必要なindex.html,zdo_drawer_menu.css,zdo_drawer_menu.jsの3つです。コンパイル前のzdo_drawer_menu.scssも入っています。
 
 ## ライセンス
 MIT License  
