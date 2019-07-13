@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*
 Zarigani Design Office Drawer Menu
 Copyright 2018 Zarigani Design Office
@@ -10,7 +8,9 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-.zdo_drawer_menu * {
+/* === Hambuerger Button's Style Paste Here === */
+/*+++ Reset +++*/
+.zdo_drawer_button * {
   margin: 0;
   padding: 0;
   outline: none;
@@ -28,15 +28,108 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   list-style: none;
 }
 
+.zdo_drawer_button {
+  display: block;
+  padding: 0;
+  width: 42px;
+  height: 26px;
+  position: relative;
+  background: none;
+  border: none;
+  text-align: center;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  display: block;
+  width: 42px;
+  height: 2px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar1 {
+  top: 0;
+}
+
+.zdo_drawer_button .zdo_drawer_bar2 {
+  top: 50%;
+}
+
+.zdo_drawer_button .zdo_drawer_bar3 {
+  top: 100%;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar {
+  width: 36.77px;
+  left: 8px;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar1 {
+  transform: rotate(0.7853981634rad) translateY(-50%);
+  top: 0px;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar2 {
+  opacity: 0;
+}
+
+.zdo_drawer_button.active .zdo_drawer_bar3 {
+  transform: rotate(-0.7853981634rad) translateY(-50%);
+  top: calc(100% - 0px);
+}
+
+.zdo_drawer_button.active .zdo_drawer_menu_text {
+  display: none;
+}
+
+.zdo_drawer_button.active .zdo_drawer_close {
+  display: block;
+}
+
+.zdo_drawer_text {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.zdo_drawer_close {
+  letter-spacing: 0.08em;
+  display: none;
+}
+
+/*+++ Default Button Color +++*/
+.zdo_drawer_button {
+  color: #2274a5;
+}
+
+.zdo_drawer_button .zdo_drawer_bar {
+  background-color: #2274a5;
+}
+
+/* === Hambuerger Button's Style End === */
+.zdo_drawer_menu .zdo_drawer_button {
+  /*+++ Hamburger Button Position +++*/
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  z-index: 1001;
+}
 .zdo_drawer_menu a {
   color: inherit;
   text-decoration: none;
 }
-
 .zdo_drawer_menu a:visited {
   color: inherit;
 }
-
 .zdo_drawer_menu .zdo_drawer_bg {
   width: 100%;
   height: 100%;
@@ -47,69 +140,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   top: 0;
   left: 0;
 }
-
-.zdo_drawer_menu .zdo_drawer_button {
-  display: block;
-  background: none;
-  border: none;
-  padding: 0;
-  width: 42px;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  position: fixed;
-  top: 32px;
-  right: 32px;
-  z-index: 1001;
-  text-align: center;
-  outline: none;
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_bar {
-  width: 49px;
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_bar1 {
-  transform: rotate(30deg);
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_bar2 {
-  opacity: 0;
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_bar3 {
-  transform: rotate(-30deg);
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_menu_text {
-  display: none;
-}
-
-.zdo_drawer_menu .zdo_drawer_button.active .zdo_drawer_close {
-  display: block;
-}
-
-.zdo_drawer_menu .zdo_drawer_bar {
-  display: block;
-  height: 2px;
-  margin: 10px 0;
-  transition: all 0.2s;
-  transform-origin: 0 0;
-}
-
-.zdo_drawer_menu .zdo_drawer_text {
-  text-align: center;
-  font-size: 10px;
-}
-
-.zdo_drawer_menu .zdo_drawer_close {
-  letter-spacing: 0.08em;
-  display: none;
-}
-
-.zdo_drawer_menu .zdo_drawer_menu_text {
-  display: block;
-}
-
 .zdo_drawer_menu .zdo_drawer_nav_wrapper {
   width: 312px;
   height: 100%;
@@ -121,22 +151,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   z-index: 1000;
   background-color: #FFF;
 }
-
 .zdo_drawer_menu .zdo_drawer_nav_wrapper.open {
   transform: translate(0);
 }
-
 .zdo_drawer_menu.left .zdo_drawer_button {
   right: auto;
   left: 32px;
 }
-
 .zdo_drawer_menu.left .zdo_drawer_nav_wrapper {
   transform: translate(-312px);
   right: auto;
   left: 0;
 }
-
 .zdo_drawer_menu.left .zdo_drawer_nav_wrapper.open {
   transform: translate(0);
 }
@@ -145,17 +171,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .zdo_drawer_menu .zdo_drawer_nav {
   padding: 112px 24px;
 }
-
 .zdo_drawer_menu .zdo_drawer_nav li {
   font-size: 16px;
   margin-bottom: 15px;
 }
 
-/*+++ Default Button Color +++*/
-.zdo_drawer_menu .zdo_drawer_button {
-  color: #276490;
-}
-
-.zdo_drawer_menu .zdo_drawer_button .zdo_drawer_bar {
-  background-color: #276490;
-}
+/*# sourceMappingURL=/zdo_drawer_menu.css.map */
